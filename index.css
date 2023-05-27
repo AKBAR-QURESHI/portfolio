@@ -1,0 +1,392 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    font-family: sans-serif;
+    
+}
+
+
+/*--------------------------> Header css start ------------------------>*/
+
+
+header{
+    background-color:#222428;
+    position: sticky;
+    z-index: 200;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.header .container{
+    
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+header a{
+    display: inline-block;
+}
+
+.header .search-bar .input-box{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 30px;
+    padding: 0 10px;
+    cursor: text;
+    flex: 2;
+    color:#8e8e93;;
+    background-color:#2c2e31;
+    border:none;
+    font-size: 12px;
+}
+
+.header .search-bar{
+    display: inline-flex;
+    flex-direction: row;
+    flex: 2;
+    align-items: center;
+}
+
+.icon-cont{
+    color: white;
+}
+
+
+.header .search-bar .input-box .icon-bar{
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+    height: 20px;
+    width: 18px;
+}
+
+.hamburger-menu,.logo,.search-bar{
+    margin-right: 27px;
+}
+
+.login{
+    color: white;
+    text-decoration: none;
+}
+
+.header-btn,.icon-cont,.login{
+    margin-right: 15px;
+}
+
+.header-btn{
+    color:black;
+    background-color: white;
+    font-size:12px;
+    line-height: 10px;
+    padding: 9px 20px 7px;
+    border-radius:20px;
+}
+
+/*------------------------------------------header css END----------------------------------------->*/
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 8px 8px;
+    justify-content: flex-start;
+    background-color:#1b1b1b;
+    margin-left: 0px;
+    position: sticky;
+    min-height: 60px;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    margin:17px;
+    font-size: 18px;
+    color:white;
+    text-decoration: none;
+
+}
+
+/*--------------------------------------2-col-layout css start-----------------------------------*/
+.songs-slider{
+    width: 60%;
+    height: 270px;
+    margin-top: 10px;
+    background-image: url(../img/img1.jpg);
+    background-size: 100% 100%;
+    position:absolute;
+    box-shadow: 1px 2px 7px 5px #1b1b1b;
+    animation: slider 9s infinite linear;
+    
+}
+
+@keyframes slider{
+    0%{background-image: url(../img/img1.jpg);}
+    35%{background-image: url(../img/img2.jpg);}
+    75%{background-image:url(../img/img3.jpg);}
+}
+
+
+.two-col-layout{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#songs-card-1{
+    margin-top: 225px;
+}
+
+.songs-section{
+    margin: 50px 0px 8px;
+    
+}
+
+#first-col{
+    display:flex;
+  flex-direction: column;
+}
+
+
+
+.music-libs{
+  flex: 7;
+  max-width: calc(100%-90%);
+  padding: 0px 45px;
+  margin: 0 auto ;
+  background-color: #1b1b1b;
+  max-width: 70%;
+}
+
+.music-adds{
+    flex: 2;
+    max-width: 30%;
+    background-color:#1E1E1E;
+}
+
+.section-heading{
+    color:white;
+    text-transform: capitalize;
+    font-family: proximanova-bold-webfont,Arial,sans-serif;
+    padding:8px;
+    margin-bottom: 6px;
+    font-size: 24px;
+
+}
+
+
+ .songs-card{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+}
+
+.songs-cantainer .songs-card .card{
+    margin-right: 45px;
+}
+
+.card:hover .img .play_icon{
+    visibility: visible;
+}
+
+.card:hover img{
+    filter: brightness(.75);
+}
+
+
+.songs-cantainer .songs-card .card  .img{
+    overflow: hidden;
+    position: relative;
+
+}
+
+.songs-cantainer .songs-card .card a img{
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 10px
+}
+
+
+.songs-cantainer .songs-card .card .t_wrap a{
+    color:white;
+    margin-top: 0px;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+
+ .img .play_icon {
+    position: absolute;
+    visibility: hidden;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0,0,0,.3);
+    cursor: pointer;
+    background-image: url(https://a10.gaanacdn.com/gn_img/images/play_1621599900.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: calc(50% + 1px) 50%;
+}
+
+/*-------------------------------------------------------2-col-layout css start -----------------------*/
+
+
+/*---------------------------------------------music-player css start -----------------------------*/
+.Progress .TimeLine__hover-track {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 100%;
+    padding: 6px 0;
+    z-index: 2;
+}
+
+.Progress {
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+   
+}
+
+.Progress .seek {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 3px;
+}
+
+.music-player{
+      position: fixed;
+      background-color:  #222428;
+      box-shadow: 0 0 4px 0 rgba(0 0 0 /50%);
+      width: 100%;
+      padding: 17px 25px;
+      bottom: 0;
+      left: 0;
+      border-radius: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+}
+
+.song-cover a img{
+    width: 30px;
+    height: 30px;
+}
+
+.song-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.song-info strong{
+    font-size: 16px;
+}
+
+.song-info .t_over{
+    color: white;
+    align-items: center;
+}
+
+.song-info small a{
+    text-decoration: none;
+    color:hsla(0,0%,100%,.75);
+    color: #ffffff;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.play loading svg{
+   
+    color: #ffffff;
+}
+
+.music-control{
+    margin-right: 30px;
+}
+
+.music-control button{
+    background-color: #222428;
+    margin: 0px 8px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.play{
+    background-color: red !important;
+    border-radius: 20px;
+    width: 32px;
+    height: 32px;
+}
+
+
+.music-quality button{
+    background-color: #222428;
+    border-style: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.song-actions{
+    margin-left: 30px;
+   
+}
+
+.song-actions button{
+    background-color: #222428;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.time{
+    border: 1px hsla(0,0%,100%,.75) solid;
+    border-radius: 14px;
+    padding: 4px 4px;
+    margin-top: 4px;
+    margin-right:10px ;
+}
+
+.time span{
+    margin: 0px 2px;
+    color:hsla(0,0%,100%,.75);;
+    font-size: 13px;
+
+}
+
